@@ -4,6 +4,6 @@
  plotly.express
  Pillow
  altair
- pygwalker.api.streamlit
+ pygwalker
  streamlit_option_menu
  
