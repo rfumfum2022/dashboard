@@ -2,7 +2,7 @@
  openpyxl
  pandas
  plotly.express
- PIL
+ Pillow
  altair
  pygwalker.api.streamlit
  streamlit_option_menu
