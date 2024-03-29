@@ -1,0 +1,9 @@
+ streamlit
+ openpyxl
+ pandas
+ plotly.express
+ PIL
+ altair
+ pygwalker.api.streamlit
+ streamlit_option_menu
+ 
