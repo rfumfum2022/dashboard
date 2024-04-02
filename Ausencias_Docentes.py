@@ -85,7 +85,7 @@ def app():
             
             st.dataframe(sustituciones)
             # Guardar DataFrame como CSV
-            ruta_archivo = '/Users/rfumfum/Documents/PYTHON/Dashboard/project_ies/sustituciones.csv'  # Ruta donde se guardará el archivo CSV
+            ruta_archivo = './sustituciones.csv'  # Ruta donde se guardará el archivo CSV
             sustituciones.to_csv(ruta_archivo, index=False)  # index=False evita que se guarde el índice del DataFrame
 
             st.dataframe(df_guardia)
@@ -99,7 +99,7 @@ def app():
     # Función para cargar o crear el DataFrame
     def cargar_dataframe():
         try:
-            df = pd.read_csv('/Users/rfumfum/Documents/PYTHON/Dashboard/project_ies/sustituciones.csv')
+            df = pd.read_csv('./sustituciones.csv')
         except FileNotFoundError:
             df = pd.DataFrame({'Tipo_actividad': [], 'Lectiva': [], 'Con_alumnado': [], 'Comienzo': [], 'Fin': [], 'Docentes': [], 'Materias': [],'Grupos_clase': [],'Aula': [],'Dia_semana': [],'Contador': []})
         return df
@@ -118,14 +118,14 @@ def app():
     def actualizar_fila(df, indice, nombre, aula):
         df.at[indice, 'Docentes'] = nombre
         df.at[indice, 'Aula'] = aula
-        df.to_csv('/Users/rfumfum/Documents/PYTHON/Dashboard/project_ies/sustituciones.csv', index=False)
+        df.to_csv('./sustituciones.csv', index=False)
 
         return df
 
     # Función para borrar una fila del DataFrame
     def borrar_fila(df, indice):
         df.drop(indice, inplace=True)
-        df.to_csv('/Users/rfumfum/Documents/PYTHON/Dashboard/project_ies/sustituciones.csv', index=False)
+        df.to_csv('./sustituciones.csv', index=False)
 
         return df
 
