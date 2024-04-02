@@ -57,7 +57,7 @@ def app():
     df_t['Nota'] = pd.to_numeric(df_t['Nota'])
 
     # Suponiendo que df es tu DataFrame y la columna se llama 'fecha'
-    df_t['Fecha'] = pd.to_datetime(df_t['Fecha'], format='%d/%m/%y')
+    df_t['Fecha'] = pd.to_datetime(df_t['Fecha'], format='%d/%m/%Y')
 
     # Extraer el año de la columna de fecha
     df_t['Año'] = df_t['Fecha'].dt.year
